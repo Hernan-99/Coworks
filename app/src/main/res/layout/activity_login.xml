@@ -96,11 +96,13 @@
             android:layout_height="30dp" />
 
         <Button
+            android:id="@+id/ingresar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="#14191D"
             android:padding="12dp"
             android:text="Iniciar Sesion"
+            android:textColor="@color/white"
             android:textSize="18dp"
             app:cornerRadius="8dp" />
 
