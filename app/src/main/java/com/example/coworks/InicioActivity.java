@@ -3,6 +3,7 @@ package com.example.coworks;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,10 @@ public class InicioActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
+
+        //funcion para ocultar barras
+        OcultarActionBar.ocultar(this);
+
 
         btnLogin = findViewById(R.id.btnLoginActivity);
         btnSignUp = findViewById(R.id.btnSignUpActivity);
