@@ -121,6 +121,7 @@
             android:backgroundTint="#14191D"
             android:padding="12dp"
             android:text="Registrarse"
+            android:textColor="@color/white"
             android:textSize="18dp"
             app:cornerRadius="8dp" />
 
