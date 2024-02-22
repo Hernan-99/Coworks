@@ -56,6 +56,7 @@
             android:layout_height="match_parent"
             android:backgroundTint="#14191D"
             android:text="Iniciar Sesion"
+            android:textColor="@color/white"
             app:cornerRadius="8dp"
             android:padding="12dp"
             android:textSize="18dp"/>
@@ -70,6 +71,7 @@
             android:layout_height="match_parent"
             android:backgroundTint="#14191D"
             android:text="Registrarse"
+            android:textColor="@color/white"
             android:textSize="18dp"
             app:cornerRadius="8dp"
             android:padding="12dp"/>
