@@ -5,6 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradiente"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -20,6 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="24 oficinas"
+            android:textColor="@color/white"
             android:textSize="16sp"
             />
 
@@ -30,6 +35,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:text="1340 lugares"
             android:textSize="16sp"
             />
@@ -41,6 +47,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:text="6 comidas"
             android:textSize="16sp"
             />
@@ -52,6 +59,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:textSize="16sp"
             android:text="2000+ clientes" />
     </LinearLayout>
@@ -142,6 +150,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nombre del lugar"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -159,8 +168,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5 lugares disponibles"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
+            android:textColor="@color/white"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
             android:textSize="16sp" />
     </LinearLayout>
 
@@ -173,11 +183,12 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="113dp"
+            android:gravity="center"
             android:layout_height="wrap_content"
-            android:text="$7000/dia"
-            android:background="@drawable/shape"
-            android:padding="8dp"
+            android:text="$7000 / dia"
+            android:background="@drawable/shape_precio_detalles"
+            android:padding="5dp"
             android:textSize="16sp"
             android:textColor="#35FF9E"
             android:textStyle="bold"/>
@@ -198,25 +209,35 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_margin="8dp"
+            android:textColor="@color/white"
             android:layout_height="wrap_content"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             android:textSize="18sp" />
 
         <Button
+            android:id="@+id/btnReserva"
             android:layout_margin="8dp"
-            android:id="@+id/ingresar"
-            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_width="330dp"
             android:layout_height="match_parent"
-            android:backgroundTint="#14191D"
+            android:backgroundTint="#1782FF"
             android:padding="12dp"
-            android:text="Iniciar Sesion"
+            android:text="Reservar"
             android:textColor="@color/white"
             android:textSize="18dp"
             app:cornerRadius="8dp" />
     </LinearLayout>
 
-
-
-
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_bottom_nav"
+        app:itemTextColor="@drawable/text_color_bottom"
+        app:itemIconTint="@drawable/text_color_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_navbar"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
