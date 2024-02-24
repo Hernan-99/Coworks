@@ -86,31 +86,21 @@
         android:overScrollMode="never"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        />
 
-    <!--
-    <LinearLayout
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
-
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewPager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="32dp"
-            android:clipToPadding="false"
-            android:foregroundGravity="center"
-            android:overScrollMode="never"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_bottom_nav"
+        app:itemTextColor="@drawable/text_color_bottom"
+        app:itemIconTint="@drawable/text_color_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_navbar"
+        tools:ignore="MissingConstraints" />
 
 
-    </LinearLayout>
-    -->
+
 </androidx.constraintlayout.widget.ConstraintLayout>
