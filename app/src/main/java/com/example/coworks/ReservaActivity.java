@@ -13,8 +13,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ReservaActivity extends AppCompatActivity {
 
-    Button btnReservar, btnCancelar;
-    BottomNavigationView nav;
+    private Button btnReservar, btnCancelar;
+    private BottomNavigationView nav;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
