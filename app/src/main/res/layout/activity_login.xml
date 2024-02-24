@@ -19,25 +19,18 @@
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginTop="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="15dp"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:text="Coworks"
-            android:textColor="@color/white"
-            android:textSize="90dp"
-            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/coworks" />
     </LinearLayout>
 
     <LinearLayout
@@ -49,7 +42,8 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <TextView
             android:layout_width="wrap_content"
@@ -60,12 +54,13 @@
             android:textSize="20sp" />
 
         <EditText
+            android:id="@+id/iptEmail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/edit_text_borde"
+            android:hint="ejemplo@email.com"
             android:inputType="textEmailAddress"
             android:padding="15dp"
-            android:hint="ejemplo@email.com"
             android:textColor="@color/white"
             android:textColorHint="#fff" />
 
@@ -82,12 +77,13 @@
             android:textSize="20sp" />
 
         <EditText
+            android:id="@+id/iptPassword"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/edit_text_borde"
+            android:hint="********"
             android:inputType="textPassword"
             android:padding="15dp"
-            android:hint="********"
             android:textColor="@color/white"
             android:textColorHint="#fff" />
 
@@ -111,10 +107,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="15dp"
             android:text="Registrate"
             android:textColor="#fff"
-            android:textSize="18sp"
-            android:layout_marginTop="15dp"/>
+            android:textSize="18sp" />
 
     </LinearLayout>
 
