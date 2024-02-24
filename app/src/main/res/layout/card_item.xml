@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_margin="8dp"
@@ -20,41 +19,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:scaleType="centerCrop"/>
-
-            <!--
-            <TextView
-                android:id="@+id/titulo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:text="titulo"
-                android:textColor="@color/black"
-                android:textSize="18sp"/>
-
-            <TextView
-                android:id="@+id/descripcion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:ellipsize="end"
-                android:maxLines="3"
-                android:minLines="3"
-                android:layout_marginLeft="8dp"
-                android:text="Descripcion"
-               />
-
-            <TextView
-                android:id="@+id/precio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_margin="8dp"
-                android:background="@drawable/shape"
-                android:drawablePadding="5dp"
-                android:gravity="center_vertical"
-                android:padding="5dp"
-                android:text="$7000/dia"
-             />-->
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -99,12 +63,6 @@
                 android:layout_gravity="center"
                 android:textSize="16sp"
                 android:textColor="@color/white"/>
-
         </LinearLayout>
-
-
     </LinearLayout>
-
-
-
 </LinearLayout>
