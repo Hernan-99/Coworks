@@ -1,12 +1,14 @@
 package com.example.coworks;
 
-import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class LoginActivity extends AppCompatActivity {
+import android.os.Bundle;
+
+public class CuentaEliminada extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_cuenta_eliminada);
     }
 }

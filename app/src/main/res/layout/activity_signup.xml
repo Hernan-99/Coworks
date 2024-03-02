@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".InicioActivity">
+    tools:context=".SignupActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -15,7 +14,6 @@
         android:alpha="0.6"
         android:background="@color/black"
         android:orientation="vertical"/>
-
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
@@ -32,7 +30,6 @@
             android:layout_gravity="center"
             android:background="@drawable/coworks" />
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -44,6 +41,52 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Nombre"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/iptNombre"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_text_borde"
+            android:hint="Tu nombre"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Telefono"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/iptTel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_text_borde"
+            android:hint="1122334455"
+            android:inputType="text|phone"
+            android:padding="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -62,17 +105,17 @@
             android:inputType="textEmailAddress"
             android:padding="15dp"
             android:textColor="@color/white"
-            android:textColorHint="#fff" />
+            android:textColorHint="@color/white" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="20dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Constraseña"
+            android:text="Contraseña"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -85,30 +128,31 @@
             android:inputType="textPassword"
             android:padding="15dp"
             android:textColor="@color/white"
-            android:textColorHint="#fff" />
+            android:textColorHint="@color/white" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="20dp" />
 
         <Button
-            android:id="@+id/ingresar"
+            android:id="@+id/btnRegistrarse"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="#14191D"
             android:padding="12dp"
-            android:text="Iniciar Sesion"
+            android:text="Registrarse"
             android:textColor="@color/white"
             android:textSize="18dp"
             app:cornerRadius="8dp" />
 
         <TextView
-            android:id="@+id/registrarse"
+            android:id="@+id/iniciarSesion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            android:text="Registrate"
+            android:layout_marginBottom="10dp"
+            android:text="Iniciar Sesion"
             android:textColor="#fff"
             android:textSize="18sp" />
 

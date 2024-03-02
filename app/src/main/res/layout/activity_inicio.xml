@@ -20,7 +20,7 @@
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="280dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,62 +37,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="16dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="Email"
-            android:textColor="#fff"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/iptEmail"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/edit_text_borde"
-            android:hint="ejemplo@email.com"
-            android:inputType="textEmailAddress"
-            android:padding="15dp"
-            android:textColor="@color/white"
-            android:textColorHint="#fff" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="Constraseña"
-            android:textColor="#fff"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/iptPassword"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/edit_text_borde"
-            android:hint="********"
-            android:inputType="textPassword"
-            android:padding="15dp"
-            android:textColor="@color/white"
-            android:textColorHint="#fff" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
-
         <Button
-            android:id="@+id/ingresar"
+            android:id="@+id/btnLoginActivity"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="#14191D"
@@ -102,16 +55,20 @@
             android:textSize="18dp"
             app:cornerRadius="8dp" />
 
-        <TextView
-            android:id="@+id/registrarse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:text="Registrate"
-            android:textColor="#fff"
-            android:textSize="18sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <Button
+            android:id="@+id/btnSignUpActivity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#14191D"
+            android:padding="12dp"
+            android:text="Registrarse"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            app:cornerRadius="8dp" />
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
