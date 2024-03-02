@@ -40,9 +40,10 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    implementation("io.jsonwebtoken:jjwt-api:0.11.3")
-    implementation("io.jsonwebtoken:jjwt-impl:0.11.3")
-    implementation("io.jsonwebtoken:jjwt-jackson:0.11.3")
+
+    // dependencia libreria room
+    implementation("androidx.room:room-runtime:2.6.1")
+    annotationProcessor("androidx.room:room-compiler:2.6.1")
 
 
 
