@@ -1,2 +1,4 @@
-package com.example.coworks.data.database.dao;public interface EmpresaDao {
+package com.example.coworks.data.database.dao;
+
+public interface EmpresaDao {
 }
