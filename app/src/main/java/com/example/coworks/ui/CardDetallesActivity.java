@@ -1,4 +1,4 @@
-package com.example.coworks.view;
+package com.example.coworks.ui;
 
 import android.content.Intent;
 import android.os.Bundle;

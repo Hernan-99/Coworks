@@ -1,4 +1,4 @@
-package com.example.coworks.ui;
+package com.example.coworks.ui.registroclient;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,10 +10,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.coworks.ui.registroadmin.RegistroAdminActivity;
+import com.example.coworks.ui.login.LoginActivity;
 import com.example.coworks.utils.OcultarActionBar;
 import com.example.coworks.R;
 
-public class SignupActivity extends AppCompatActivity {
+public class RegistroClientActivity extends AppCompatActivity {
 
     EditText nombre, telefono, email, password;
 
@@ -38,9 +40,9 @@ public class SignupActivity extends AppCompatActivity {
         btnRegistrarse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(SignupActivity.this, "Usuario creado, inicie sesion", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegistroClientActivity.this, "Usuario creado, inicie sesion", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                Intent intent = new Intent(RegistroClientActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
@@ -49,7 +51,7 @@ public class SignupActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                Intent intent = new Intent(RegistroClientActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
@@ -57,7 +59,7 @@ public class SignupActivity extends AppCompatActivity {
         adminRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SignupActivity.this, SignupAdminActivity.class);
+                Intent intent = new Intent(RegistroClientActivity.this, RegistroAdminActivity.class);
                 startActivity(intent);
             }
         });

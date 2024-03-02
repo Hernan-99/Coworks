@@ -1,2 +1,4 @@
-package com.example.coworks.ui.registroclient;public class RegistroClientViewModel {
+package com.example.coworks.ui.registroclient;
+
+public class RegistroClientViewModel {
 }

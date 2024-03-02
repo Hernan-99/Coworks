@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.coworks.utils.OcultarActionBar;
+import com.example.coworks.utils.RedireccionamientoNavbar;
+import com.example.coworks.ui.MainActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class SuccessLugarReservado extends AppCompatActivity {
@@ -20,7 +23,7 @@ public class SuccessLugarReservado extends AppCompatActivity {
         setContentView(R.layout.activity_success_lugar_reservado);
 
         nav = findViewById(R.id.bottom_navbar);
-        RedireccionamientosNavbar listener = new RedireccionamientosNavbar(this);
+        RedireccionamientoNavbar listener = new RedireccionamientoNavbar(this);
         nav.setOnItemSelectedListener(listener);
 
 

@@ -1,4 +1,4 @@
-package com.example.coworks.ui;
+package com.example.coworks.ui.perfil;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.coworks.ConfirmarEliminarCuenta;
+import com.example.coworks.ui.MainActivity;
 import com.example.coworks.ui.inicio.InicioActivity;
 import com.example.coworks.utils.OcultarActionBar;
 import com.example.coworks.R;

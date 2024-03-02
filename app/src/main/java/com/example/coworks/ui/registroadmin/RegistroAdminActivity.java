@@ -1,4 +1,4 @@
-package com.example.coworks.ui;
+package com.example.coworks.ui.registroadmin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,8 +11,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.coworks.R;
+import com.example.coworks.ui.login.LoginActivity;
 
-public class SignupAdminActivity extends AppCompatActivity {
+public class RegistroAdminActivity extends AppCompatActivity {
     private Button btnRegistroAdmin;
     private TextView btnIniciar;
     private EditText nombre, telefono, email, password;
@@ -34,15 +35,15 @@ public class SignupAdminActivity extends AppCompatActivity {
         btnRegistroAdmin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(SignupAdminActivity.this, "Admin creado, inicie sesion", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(SignupAdminActivity.this, LoginActivity.class);
+                Toast.makeText(RegistroAdminActivity.this, "Admin creado, inicie sesion", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(RegistroAdminActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
         btnIniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SignupAdminActivity.this, LoginActivity.class);
+                Intent intent = new Intent(RegistroAdminActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });

@@ -1,2 +1,4 @@
-package com.example.coworks.ui.login;public class LoginViewModel {
+package com.example.coworks.ui.login;
+
+public class LoginViewModel {
 }

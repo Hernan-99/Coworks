@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.coworks.ui.MainActivity;
+
 public class ConfirmarEliminarCuenta extends AppCompatActivity {
     private Button btnConfirmar, btnCancelar;
 

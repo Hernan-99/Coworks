@@ -1,2 +1,4 @@
-package com.example.coworks.data.database.appdatabase;public class CoworksDatabase {
+package com.example.coworks.data.database.appdatabase;
+
+public class CoworksDatabase {
 }

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".InicioActivity">
+    tools:context=".ui.inicio.InicioActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -69,6 +69,8 @@
             android:textColor="@color/white"
             android:textSize="18dp"
             app:cornerRadius="8dp" />
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

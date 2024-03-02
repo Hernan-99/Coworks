@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Coworks"
         tools:targetApi="31">
         <activity
-            android:name=".Scroll"
+            android:name=".ui.registroadmin.RegistroAdminActivity"
             android:exported="false" />
         <activity
             android:name=".CuentaEliminada"
@@ -22,25 +22,25 @@
             android:name=".ConfirmarEliminarCuenta"
             android:exported="false" />
         <activity
-            android:name=".PerfilActivity"
+            android:name=".ui.perfil.PerfilActivity"
             android:exported="false" />
         <activity
             android:name=".SuccessLugarReservado"
             android:exported="false" />
         <activity
-            android:name=".ReservaActivity"
+            android:name=".ui.ReservaActivity"
             android:exported="false" />
         <activity
-            android:name=".SignupActivity"
+            android:name=".ui.registroclient.RegistroClientActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.login.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".CardDetallesActivity"
+            android:name=".ui.CardDetallesActivity"
             android:exported="false" />
         <activity
-            android:name=".InicioActivity"
+            android:name=".ui.inicio.InicioActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,7 +49,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,2 +1,4 @@
-package com.example.coworks.ui.perfil;public class PerfilViewModel {
+package com.example.coworks.ui.perfil;
+
+public class PerfilViewModel {
 }

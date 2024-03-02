@@ -1,4 +1,4 @@
-package com.example.coworks.PassUtil;
+package com.example.coworks.utils;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

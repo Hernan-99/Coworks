@@ -1,4 +1,4 @@
-package com.example.coworks.interfaces;
+package com.example.coworks.utils;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,8 +7,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
-import com.example.coworks.view.MainActivity;
-import com.example.coworks.view.PerfilActivity;
+import com.example.coworks.ui.MainActivity;
+import com.example.coworks.ui.perfil.PerfilActivity;
 import com.example.coworks.R;
 import com.google.android.material.navigation.NavigationBarView;
 

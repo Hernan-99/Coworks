@@ -1,4 +1,4 @@
-package com.example.coworks.view;
+package com.example.coworks.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -1,4 +1,4 @@
-package com.example.coworks;
+package com.example.coworks.utils;
 
 import android.app.Activity;
 import android.view.View;

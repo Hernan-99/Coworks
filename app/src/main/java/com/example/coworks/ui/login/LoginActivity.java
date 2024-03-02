@@ -1,4 +1,4 @@
-package com.example.coworks.ui;
+package com.example.coworks.ui.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.coworks.ui.MainActivity;
+import com.example.coworks.ui.registroclient.RegistroClientActivity;
 import com.example.coworks.utils.OcultarActionBar;
 import com.example.coworks.R;
 
@@ -33,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Creacion de Intent para abrir la activity
-                Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
+                Intent intent = new Intent(LoginActivity.this, RegistroClientActivity.class);
                 startActivity(intent);
             }
         });
