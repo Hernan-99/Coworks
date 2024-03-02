@@ -1,16 +1,18 @@
-package com.example.coworks;
+package com.example.coworks.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.coworks.utils.OcultarActionBar;
+import com.example.coworks.R;
+
 public class InicioActivity extends AppCompatActivity {
 
-    Button btnLogin, btnSignUp;
+    private Button btnLogin, btnSignUp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

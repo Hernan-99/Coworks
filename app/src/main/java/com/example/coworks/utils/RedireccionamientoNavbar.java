@@ -7,8 +7,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
-import com.example.coworks.MainActivity;
-import com.example.coworks.PerfilActivity;
+import com.example.coworks.view.MainActivity;
+import com.example.coworks.view.PerfilActivity;
 import com.example.coworks.R;
 import com.google.android.material.navigation.NavigationBarView;
 

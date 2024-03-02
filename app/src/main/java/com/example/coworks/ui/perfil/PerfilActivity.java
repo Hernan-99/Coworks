@@ -1,4 +1,4 @@
-package com.example.coworks;
+package com.example.coworks.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,18 +11,28 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.coworks.interfaces.RedireccionamientoNavbar;
+import com.example.coworks.ConfirmarEliminarCuenta;
+import com.example.coworks.ui.inicio.InicioActivity;
+import com.example.coworks.utils.OcultarActionBar;
+import com.example.coworks.R;
+import com.example.coworks.utils.RedireccionamientoNavbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class PerfilActivity extends AppCompatActivity {
 
-    private TextView bntEliminarCuenta;
+    // variables
+    private TextView iptNombre, iptTelefono, iptEmail, iptPassword;
+    private TextView bntEliminarCuenta, btnCerrarSesion;
     private Button btnGuardarDatos, btnCancelar;
     private BottomNavigationView nav;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
+        //funcion para ocultar barras
+        OcultarActionBar.ocultar(this);
+
+
 
         nav = findViewById(R.id.bottom_navbar);
         RedireccionamientoNavbar listener = new RedireccionamientoNavbar(this);
@@ -33,13 +43,15 @@ public class PerfilActivity extends AppCompatActivity {
         MenuItem menuItem = menu.findItem(R.id.perfil);
         menuItem.setChecked(true);
 
-        //funcion para ocultar barras
-        OcultarActionBar.ocultar(this);
-
-        // ---- REFERENCIA A ID BTNS ----
+        // ---- REFERENCIA A ID's ----
+        iptNombre = findViewById(R.id.iptNombre);
+        iptTelefono = findViewById(R.id.iptTelefono);
+        iptEmail = findViewById(R.id.iptEmail);
+        iptPassword = findViewById(R.id.iptPassword);
         btnGuardarDatos = findViewById(R.id.btnGuardarDatos);
         btnCancelar = findViewById(R.id.btnCancelar);
         bntEliminarCuenta = findViewById(R.id.btnEliminarCuenta);
+        btnCerrarSesion = findViewById(R.id.btnCerrarSesion);
         //-------------------------------
 
 
@@ -59,6 +71,18 @@ public class PerfilActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnCerrarSesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(PerfilActivity.this, "Cerrando sesion", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(PerfilActivity.this, InicioActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
         bntEliminarCuenta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,7 +90,8 @@ public class PerfilActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         // ----------------------------------
     }
+
+
 }

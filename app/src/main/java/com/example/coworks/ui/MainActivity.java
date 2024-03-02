@@ -1,18 +1,17 @@
-package com.example.coworks;
+package com.example.coworks.view;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.Toast;
 
-import com.example.coworks.interfaces.RedireccionamientoNavbar;
+import com.example.coworks.CardAdapter;
+import com.example.coworks.CardModel;
+import com.example.coworks.utils.OcultarActionBar;
+import com.example.coworks.R;
+import com.example.coworks.utils.RedireccionamientoNavbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 
