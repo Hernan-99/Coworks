@@ -1,64 +1,110 @@
-package com.example.coworks;
+package com.example.coworks.ui.fragment;
 
+import android.app.Dialog;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link EditarPerfilFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class EditarPerfilFragment extends Fragment {
+import com.example.coworks.R;
+import com.example.coworks.data.database.model.Usuario;
+import com.example.coworks.ui.perfil.PerfilViewModel;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+public class EditarPerfilFragment extends DialogFragment {
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private Button btnGuardarCambios, btnCancelar;
+    private ImageButton btnCerrarDialog;
+    private EditText iptNombre, iptTelefono, iptEmail, iptPassword;
+    private Usuario usuarioUpdate;
+    private PerfilViewModel perfilViewModel;
 
     public EditarPerfilFragment() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment EditarPerfilFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static EditarPerfilFragment newInstance(String param1, String param2) {
-        EditarPerfilFragment fragment = new EditarPerfilFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
+    @NonNull
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+        return super.onCreateDialog(savedInstanceState);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_editar_perfil, container, false);
+        View view = inflater.inflate(R.layout.fragment_editar_perfil, container, false);
+
+
+        iptNombre = view.findViewById(R.id.iptNuevoNombre);
+        iptTelefono = view.findViewById(R.id.iptNuevoTelefono);
+        iptEmail = view.findViewById(R.id.iptNuevoEmail);
+        iptPassword = view.findViewById(R.id.iptNuevaPassword);
+        btnGuardarCambios = view.findViewById(R.id.btnGuardarCambios);
+        btnCancelar = view.findViewById(R.id.btnCancelar);
+        btnCerrarDialog = view.findViewById(R.id.btnCerrarDialog);
+
+
+        btnCerrarDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dismiss();
+            }
+        });
+        btnGuardarCambios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String nuevoNombre = iptNombre.getText().toString();
+                String nuevoTelefono = iptTelefono.getText().toString();
+                String nuevoEmail = iptEmail.getText().toString();
+                String nuevoPassword = iptPassword.getText().toString();
+
+                // Crear un nuevo objeto Usuario con los nuevos valores
+                usuarioUpdate = new Usuario();
+                usuarioUpdate.setNombre_usuario(nuevoNombre);
+                usuarioUpdate.setTelefono_usuario(nuevoTelefono);
+                usuarioUpdate.setEmail_usuario(nuevoEmail);
+                usuarioUpdate.setPassword_usuario(nuevoPassword);
+
+                // Obtener una instancia de UsuarioDao y actualizar el usuario en la base de datos
+                perfilViewModel.usuarioDao.updateUsuario(usuarioUpdate);
+
+                dismiss();
+                Toast.makeText(view.getContext(), "Datos guardados", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnCancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dismiss();
+            }
+        });
+
+        // Obtener los argumentos pasados desde la actividad
+        Bundle args = getArguments();
+        if (args != null) {
+            String nombre = args.getString("nombre", "");
+            String telefono = args.getString("telefono", "");
+            String email = args.getString("email", "");
+            String password = args.getString("password", "");
+
+            iptNombre.setHint(nombre);
+            iptTelefono.setHint(telefono);
+            iptEmail.setHint(email);
+            iptPassword.setHint(password);
+        }
+
+
+
+        return view;
     }
 }
