@@ -7,10 +7,10 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "rol")
 public class Rol {
     @PrimaryKey(autoGenerate = true)
-    int id_rol;
+    public int id_rol;
 
     @NonNull
-    String nombre_rol;
+    public String nombre_rol;
 
     //constructor vacio
     public Rol() {

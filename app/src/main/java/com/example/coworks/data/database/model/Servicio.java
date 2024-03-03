@@ -8,10 +8,10 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "servicio")
 public class Servicio {
     @PrimaryKey(autoGenerate = true)
-    int id_servicio;
+    public int id_servicio;
 
     @NonNull
-    String tipo_servicio;
+    public String tipo_servicio;
 
     // constructor vacio
     public Servicio() {

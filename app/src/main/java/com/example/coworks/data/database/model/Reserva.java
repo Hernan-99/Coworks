@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "reserva", foreignKeys = {
         @ForeignKey(entity = Oficina.class,
-                    parentColumns = "id_ofician",
+                    parentColumns = "id_oficina",
                     childColumns = "oficina_id_oficina",
                     onDelete = ForeignKey.CASCADE),
         @ForeignKey(entity = Usuario.class,
@@ -30,15 +30,15 @@ import androidx.room.PrimaryKey;
 })
 public class Reserva {
     @PrimaryKey(autoGenerate = true)
-    int id_reserva;
+    public int id_reserva;
 
     @NonNull
-    int precio_reserva;
-    int oficina_id_oficina;
-    int usuario_id_usuario;
-    int usuario_rol_id_rol;
-    int empresa_id_empresa;
-    int servicio_id_servicio;
+    public int precio_reserva;
+    public int oficina_id_oficina;
+    public int usuario_id_usuario;
+    public int usuario_rol_id_rol;
+    public int empresa_id_empresa;
+    public int servicio_id_servicio;
 
     // constructor vacio
     public Reserva() {

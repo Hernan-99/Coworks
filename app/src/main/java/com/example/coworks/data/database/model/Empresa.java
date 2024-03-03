@@ -7,12 +7,12 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "empresa")
 public class Empresa {
     @PrimaryKey(autoGenerate = true)
-    int id_empresa;
+    public int id_empresa;
 
     @NonNull
-    String nombre_empresa;
-    //constructor vacio
+    public String nombre_empresa;
 
+    //constructor vacio
     public Empresa() {
     }
 

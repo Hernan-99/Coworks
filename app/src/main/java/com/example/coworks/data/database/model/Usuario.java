@@ -12,23 +12,23 @@ import androidx.room.PrimaryKey;
     onDelete = ForeignKey.CASCADE))
 public class Usuario {
     @PrimaryKey(autoGenerate = true)
-    int id_usuario;
+    public int id_usuario;
 
     @NonNull
-    String nombre_usario;
+    public String nombre_usuario;
 
     @NonNull
-    String telefono_usuario;
+    public String telefono_usuario;
 
     @NonNull
-    String email_usuario;
+    public String email_usuario;
 
     @NonNull
-    String password_usuario;
+    public String password_usuario;
 
     @ColumnInfo(name = "rol_id_rol")
     @NonNull
-    int rolIdRol;
+    public int rolIdRol;
 
     //constructor vacio
     public Usuario() {
@@ -38,13 +38,13 @@ public class Usuario {
 
 
     public Usuario(int id_usuario,
-                   @NonNull String nombre_usario,
+                   @NonNull String nombre_usuario,
                    @NonNull String telefono_usuario,
                    @NonNull String email_usuario,
                    @NonNull String password_usuario,
                    int rolIdRol) {
         this.id_usuario = id_usuario;
-        this.nombre_usario = nombre_usario;
+        this.nombre_usuario = nombre_usuario;
         this.telefono_usuario = telefono_usuario;
         this.email_usuario = email_usuario;
         this.password_usuario = password_usuario;
@@ -52,6 +52,8 @@ public class Usuario {
     }
 
     //Getters & Setters
+
+
     public int getId_usuario() {
         return id_usuario;
     }
@@ -61,12 +63,12 @@ public class Usuario {
     }
 
     @NonNull
-    public String getNombre_usario() {
-        return nombre_usario;
+    public String getNombre_usuario() {
+        return nombre_usuario;
     }
 
-    public void setNombre_usario(@NonNull String nombre_usario) {
-        this.nombre_usario = nombre_usario;
+    public void setNombre_usuario(@NonNull String nombre_usuario) {
+        this.nombre_usuario = nombre_usuario;
     }
 
     @NonNull

@@ -21,16 +21,16 @@ import androidx.room.PrimaryKey;
 })
 public class Oficina {
     @PrimaryKey(autoGenerate = true)
-    int id_oficina;
+    public int id_oficina;
 
     @NonNull
-    int capacidad_oficina;
+    public int capacidad_oficina;
 
     @NonNull
-    String ubicacion_oficina;
-    int usuario_id_usuario;
-    int usuario_rol_id_rol;
-    int empresa_id_empresa;
+    public String ubicacion_oficina;
+    public int usuario_id_usuario;
+    public int usuario_rol_id_rol;
+    public int empresa_id_empresa;
 
     //constructor vacio
     public Oficina() {
